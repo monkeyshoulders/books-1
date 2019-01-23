@@ -3,5 +3,6 @@
 <% @books.each do |book| %>
   <h3> <%= link_to book.title, book_path(book), style: "color: #666" %> </h3>
 <% end %>
-
+<% if user_signed_in? %>
 <%= link_to "Add Book", new_book_path, class: "btn btn-primary", style: "margin-top: 2rem" %>
+<% end %>
